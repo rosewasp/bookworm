@@ -17,7 +17,8 @@ if ($mysqli->query($sql) === TRUE) {
 	echo "<h1>Welcome " . $_POST['username'] . "!</h1>";
 	echo "<div>You have successfully made a new account</div";
 } else if ($mysqli->errno === 1062) {
-	echo "<div>The username " . $_POST['username'] . " is taken. Please try again with a different username.</div>";
+  echo "<div>The username " . $_POST['username'] . " is taken.
+  Please <a href= 'signup.html'><button>Try Again</button></a> with a different username.</div>";
 }
 
 $mysqli->close();
